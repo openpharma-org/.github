@@ -11,6 +11,7 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 | Server | Description | Data Source |
 |--------|-------------|-------------|
 | **[fda-mcp](https://github.com/openpharma-org/fda-mcp)** | FDA drug labels, adverse events, recalls, shortages | FDA openFDA API |
+| **[ema-mcp](https://github.com/openpharma-org/ema-mcp)** | EMA drug approvals, EPARs, orphan designations, EU shortages | EMA Public JSON API |
 | **[ct-gov-mcp](https://github.com/openpharma-org/ct-gov-mcp)** | Clinical trial search and study information | ClinicalTrials.gov API v2 |
 | **[pubmed-mcp](https://github.com/openpharma-org/pubmed-mcp)** | Biomedical literature search and retrieval | PubMed/NCBI E-utilities |
 | **[nlm-codes-mcp](https://github.com/openpharma-org/nlm-codes-mcp)** | Medical coding systems (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API |
