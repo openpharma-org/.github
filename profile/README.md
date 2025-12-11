@@ -171,58 +171,6 @@ We welcome contributions! Each server repository has its own contribution guidel
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-## Development Roadmap
-
-### Phase 1: Core Stability (Current)
-- ✅ 13 production-ready servers
-- ✅ Comprehensive documentation
-- ✅ Type safety and error handling
-
-### Phase 2: Enhanced Capabilities (Q1 2025)
-- 🔄 Advanced caching strategies
-- 🔄 Rate limit coordination across servers
-- 🔄 GraphQL-style query composition
-
-### Phase 3: Community Growth (Q2 2025)
-- 📋 Community server templates
-- 📋 Certification program for quality
-- 📋 Shared test harness
-
-### Phase 4: Enterprise Features (Q3 2025)
-- 📋 Authentication/authorization framework
-- 📋 Audit logging and compliance
-- 📋 High-availability deployment guides
-
-## Community
-
-- **GitHub Organization**: [github.com/openpharma](https://github.com/openpharma)
-- **Discussions**: [github.com/openpharma/community/discussions](https://github.com/openpharma/community/discussions)
-- **Issues**: Report bugs in individual server repositories
-- **Twitter/X**: [@openpharma_mcp](https://twitter.com/openpharma_mcp) *(placeholder)*
-
-## License
-
-All OpenPharma servers are MIT licensed unless otherwise specified. See individual repositories for details.
-
-## Citation
-
-If you use OpenPharma servers in academic research, please cite:
-
-```bibtex
-@software{openpharma2025,
-  title = {OpenPharma: MCP Servers for Pharmaceutical Intelligence},
-  author = {OpenPharma Contributors},
-  year = {2025},
-  url = {https://github.com/openpharma}
-}
-```
-
-## Acknowledgments
-
-Built on the [Model Context Protocol](https://modelcontextprotocol.io) by Anthropic.
-
-Data sources: FDA, NIH/NLM, WHO, CDC, CMS, USPTO, SEC, Open Targets, PubChem, and Google Data Commons.
-
 ---
 
 **Made with ❤️ by the pharmaceutical AI community**
