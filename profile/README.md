@@ -22,80 +22,45 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 
 ### 🏥 Clinical & Regulatory (Core)
 
-| Server | Description | Data Source | Status |
-|--------|-------------|-------------|--------|
-| **[fda-mcp](https://github.com/openpharma/fda-mcp)** | FDA drug labels, adverse events, recalls, shortages | FDA openFDA API | ✅ Stable |
-| **[ct-gov-mcp](https://github.com/openpharma/ct-gov-mcp)** | Clinical trial search and study information | ClinicalTrials.gov API v2 | ✅ Stable |
-| **[pubmed-mcp](https://github.com/openpharma/pubmed-mcp)** | Biomedical literature search and retrieval | PubMed/NCBI E-utilities | ✅ Stable |
-| **[nlm-codes-mcp](https://github.com/openpharma/nlm-codes-mcp)** | Medical coding systems (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API | ✅ Stable |
+| Server | Description | Data Source |
+|--------|-------------|-------------|
+| **[fda-mcp](https://github.com/openpharma/fda-mcp)** | FDA drug labels, adverse events, recalls, shortages | FDA openFDA API |
+| **[ct-gov-mcp](https://github.com/openpharma/ct-gov-mcp)** | Clinical trial search and study information | ClinicalTrials.gov API v2 |
+| **[pubmed-mcp](https://github.com/openpharma/pubmed-mcp)** | Biomedical literature search and retrieval | PubMed/NCBI E-utilities |
+| **[nlm-codes-mcp](https://github.com/openpharma/nlm-codes-mcp)** | Medical coding systems (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API |
 
 ### 🌍 Public Health & Epidemiology
 
-| Server | Description | Data Source | Status |
-|--------|-------------|-------------|--------|
-| **[who-mcp](https://github.com/openpharma/who-mcp)** | Global health statistics and indicators | WHO Global Health Observatory | ✅ Stable |
-| **[cdc-mcp](https://github.com/openpharma/cdc-mcp)** | Disease surveillance, BRFSS, vaccination data | CDC WONDER, Socrata APIs | ✅ Stable |
-| **[datacommons-mcp](https://github.com/openpharma/datacommons-mcp)** | Population statistics and disease burden | Google Data Commons | ✅ Stable |
+| Server | Description | Data Source |
+|--------|-------------|-------------|
+| **[who-mcp](https://github.com/openpharma/who-mcp)** | Global health statistics and indicators | WHO Global Health Observatory |
+| **[cdc-mcp](https://github.com/openpharma/cdc-mcp)** | Disease surveillance, BRFSS, vaccination data | CDC WONDER, Socrata APIs |
+| **[datacommons-mcp](https://github.com/openpharma/datacommons-mcp)** | Population statistics and disease burden | Google Data Commons |
 
 ### 💊 Drug Discovery & Chemistry
 
-| Server | Description | Data Source | Status |
-|--------|-------------|-------------|--------|
-| **[opentargets-mcp](https://github.com/openpharma/opentargets-mcp)** | Target validation and genetic evidence | Open Targets Platform | ✅ Stable |
-| **[pubchem-mcp](https://github.com/openpharma/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API | ✅ Stable |
+| Server | Description | Data Source |
+|--------|-------------|-------------|
+| **[opentargets-mcp](https://github.com/openpharma/opentargets-mcp)** | Target validation and genetic evidence | Open Targets Platform |
+| **[pubchem-mcp](https://github.com/openpharma/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API |
 
 ### 📊 Business Intelligence
 
-| Server | Description | Data Source | Status |
-|--------|-------------|-------------|--------|
-| **[sec-mcp](https://github.com/openpharma/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API | ✅ Stable |
-| **[healthcare-mcp](https://github.com/openpharma/healthcare-mcp)** | Medicare claims and provider data | CMS Medicare API | ✅ Stable |
-| **[patents-mcp](https://github.com/openpharma/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents | ✅ Stable |
+| Server | Description | Data Source |
+|--------|-------------|-------------|
+| **[sec-mcp](https://github.com/openpharma/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API |
+| **[healthcare-mcp](https://github.com/openpharma/healthcare-mcp)** | Medicare claims and provider data | CMS Medicare API |
+| **[patents-mcp](https://github.com/openpharma/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents |
 
 ### 📈 Financial & Economic (Third-Party)
 
-| Server | Description | Data Source | Status |
-|--------|-------------|-------------|--------|
-| **[financials-mcp](https://github.com/openpharma/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API | ✅ Stable |
+| Server | Description | Data Source |
+|--------|-------------|-------------|
+| **[financials-mcp](https://github.com/openpharma/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API |
 
 ## Quick Start
 
-### Installation
-
-Each server can be installed independently via npm or pip:
-
-```bash
-# Example: Install FDA MCP server
-npm install -g @openpharma/fda-mcp
-
-# Or with pip for Python servers
-pip install openpharma-fda-mcp
-```
-
-### Configuration
-
-Add servers to your Claude Desktop or MCP client configuration:
-
-```json
-{
-  "mcpServers": {
-    "fda": {
-      "command": "fda-mcp"
-    },
-    "clinicaltrials": {
-      "command": "ct-gov-mcp"
-    },
-    "pubmed": {
-      "command": "pubmed-mcp",
-      "env": {
-        "PUBMED_API_KEY": "your_api_key"
-      }
-    }
-  }
-}
-```
-
-See individual server repositories for detailed installation and configuration instructions.
+See individual server repositories for installation and configuration instructions.
 
 ## Use Cases
 
