@@ -10,19 +10,19 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 
 | Server | Description | Data Source |
 |--------|-------------|-------------|
-| **[fda-mcp](https://github.com/openpharma/fda-mcp)** | FDA drug labels, adverse events, recalls, shortages | FDA openFDA API |
-| **[ct-gov-mcp](https://github.com/openpharma/ct-gov-mcp)** | Clinical trial search and study information | ClinicalTrials.gov API v2 |
-| **[pubmed-mcp](https://github.com/openpharma/pubmed-mcp)** | Biomedical literature search and retrieval | PubMed/NCBI E-utilities |
-| **[nlm-codes-mcp](https://github.com/openpharma/nlm-codes-mcp)** | Medical coding systems (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API |
-| **[who-mcp](https://github.com/openpharma/who-mcp)** | Global health statistics and indicators | WHO Global Health Observatory |
-| **[cdc-mcp](https://github.com/openpharma/cdc-mcp)** | Disease surveillance, BRFSS, vaccination data | CDC WONDER, Socrata APIs |
-| **[datacommons-mcp](https://github.com/openpharma/datacommons-mcp)** | Population statistics and disease burden | Google Data Commons |
-| **[opentargets-mcp](https://github.com/openpharma/opentargets-mcp)** | Target validation and genetic evidence | Open Targets Platform |
-| **[pubchem-mcp](https://github.com/openpharma/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API |
-| **[sec-mcp](https://github.com/openpharma/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API |
-| **[healthcare-mcp](https://github.com/openpharma/healthcare-mcp)** | Medicare claims and provider data | CMS Medicare API |
-| **[patents-mcp](https://github.com/openpharma/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents |
-| **[financials-mcp](https://github.com/openpharma/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API |
+| **[fda-mcp](https://github.com/openpharma-org/fda-mcp)** | FDA drug labels, adverse events, recalls, shortages | FDA openFDA API |
+| **[ct-gov-mcp](https://github.com/openpharma-org/ct-gov-mcp)** | Clinical trial search and study information | ClinicalTrials.gov API v2 |
+| **[pubmed-mcp](https://github.com/openpharma-org/pubmed-mcp)** | Biomedical literature search and retrieval | PubMed/NCBI E-utilities |
+| **[nlm-codes-mcp](https://github.com/openpharma-org/nlm-codes-mcp)** | Medical coding systems (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API |
+| **[who-mcp](https://github.com/openpharma-org/who-mcp)** | Global health statistics and indicators | WHO Global Health Observatory |
+| **[cdc-mcp](https://github.com/openpharma-org/cdc-mcp)** | Disease surveillance, BRFSS, vaccination data | CDC WONDER, Socrata APIs |
+| **[datacommons-mcp](https://github.com/openpharma-org/datacommons-mcp)** | Population statistics and disease burden | Google Data Commons |
+| **[opentargets-mcp](https://github.com/openpharma-org/opentargets-mcp)** | Target validation and genetic evidence | Open Targets Platform |
+| **[pubchem-mcp](https://github.com/openpharma-org/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API |
+| **[sec-mcp](https://github.com/openpharma-org/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API |
+| **[healthcare-mcp](https://github.com/openpharma-org/healthcare-mcp)** | Medicare claims and provider data | CMS Medicare API |
+| **[patents-mcp](https://github.com/openpharma-org/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents |
+| **[financials-mcp](https://github.com/openpharma-org/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API |
 
 ## Use Cases
 
