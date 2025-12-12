@@ -319,7 +319,11 @@ MCP server providing comprehensive access to Asian financial filings via Japan's
 - Korea (DART): 2,700+ companies (KOSPI, KOSDAQ, KONEX) via Financial Supervisory Service
 - Company search by name (Japanese, Korean, English)
 - Complete filing access with multiple document formats
-- XBRL data extraction with J-GAAP and K-GAAP taxonomy support
+- Advanced XBRL analysis with J-GAAP and K-GAAP taxonomy support (Phase 2)
+- Fact table builder with BI-ready summaries and value search
+- Time-series analysis with growth rates and trend detection
+- Advanced dimensional extraction (geography, segment, product)
+- 21+ business fact classifications with multi-language support
 - Financial statements (balance sheets, income statements, cash flow)
 - Major shareholder tracking and ownership analysis
 - Executive and officer information
@@ -354,6 +358,15 @@ MCP server providing comprehensive access to Asian financial filings via Japan's
 - `get_korea_executive_info`: Get executive/officer information
 - `get_korea_dividend_info`: Get dividend allocation data
 
+**XBRL Analysis:**
+- `parse_xbrl_facts`: Parse XBRL data from EDINET/DART filings
+- `filter_facts`: Filter XBRL facts by concept, context, period
+- `classify_fact`: Classify XBRL facts into business categories (21+ types)
+- `extract_dimensions`: Extract geographic, segment, product dimensions
+- `build_fact_table`: Build comprehensive BI-ready fact table with value search
+- `search_facts_by_value`: Search facts around target value with deviation analysis
+- `time_series_analysis`: Multi-period analysis with growth rates and trends
+
 **Utilities:**
 - `filter_filings`: Filter filing arrays by criteria
 
@@ -370,12 +383,18 @@ MCP server providing comprehensive access to Asian financial filings via Japan's
   - Multiple disclosure types (annual, quarterly, equity, issuance)
 
 ### Technical Features
+- Advanced XBRL fact table builder with BI summaries (Phase 2)
+- Time-series analyzer with growth rates and trend detection (Phase 2)
+- 21+ business fact classifications (Revenue, Cost of Sales, Operating Income, etc.)
+- Advanced dimensional extraction (geography, segment, product)
 - J-GAAP taxonomy support (Japan)
 - K-GAAP/IFRS taxonomy support (Korea)
 - EDINET code and corporate code identification systems
-- Multi-language support (Japanese, Korean, English)
+- Multi-language support (Japanese kanji/hiragana/katakana, Korean hangul, English)
 - UTF-8 encoding for Asian characters
+- Currency formatting for Japanese Yen (¥) and Korean Won (₩)
 - Free API access with key registration
+- 100% test coverage (52 comprehensive tests)
 
 ### API Keys Required
 - **EDINET**: Free registration at disclosure.edinet-fsa.go.jp
