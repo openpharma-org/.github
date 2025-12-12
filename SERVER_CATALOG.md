@@ -240,7 +240,7 @@ MCP server for accessing SEC EDGAR filings, company financials, and XBRL data. P
 
 ---
 
-## 8. Healthcare (CMS) MCP Server
+## 8. Healthcare (CMS Medicare) MCP Server
 
 **Repository**: `healthcare-mcp`
 **Package Name**: `@openpharma/healthcare-mcp` (npm) / `openpharma-healthcare-mcp` (pip)
@@ -271,6 +271,54 @@ MCP server for accessing Medicare physician and provider data from CMS. Includes
   - `geography_and_service`: Regional analysis
   - `provider_and_service`: Provider-level data
   - `provider`: Provider demographics
+
+---
+
+## 8b. Medicaid MCP Server
+
+**Repository**: `medicaid-mcp-server`
+**Package Name**: `@openpharma/medicaid-mcp-server` (npm) / `openpharma-medicaid-mcp` (pip)
+**Current Location**: https://github.com/openpharma-org/medicaid-mcp-server
+**Language**: Node.js
+
+### Description
+MCP server for accessing Medicaid public data from data.medicaid.gov. Provides drug pricing (NADAC), state enrollment trends, federal upper limits, drug rebate program data, and state drug utilization statistics. Uses hybrid CSV + DKAN API architecture optimized for large datasets.
+
+### Key Features
+- NADAC drug pricing (1.5M records, weekly updates)
+- State-by-state Medicaid enrollment trends
+- Federal Upper Limits (FUL) pricing for generic drugs
+- Drug Rebate Program (MDRP) product information
+- State Drug Utilization Data (prescription volume by state)
+- Hybrid architecture: CSV for small datasets, DKAN API for large datasets
+- Memory-optimized (~215 MB total vs ~4+ GB for all CSV)
+
+### Data Source
+- **API**: DKAN platform (data.medicaid.gov)
+- **Authority**: Centers for Medicare & Medicaid Services
+- **Update Frequency**: Weekly (NADAC), Monthly (Enrollment, FUL), Quarterly (Rebate, Utilization)
+- **Rate Limits**: None specified (DKAN API)
+- **API Key**: Not required
+
+### Methods
+- `get_nadac_pricing`: Drug pricing lookup by NDC or name
+- `compare_drug_pricing`: Multi-drug or temporal price comparison
+- `get_enrollment_trends`: State enrollment over time
+- `compare_state_enrollment`: Multi-state enrollment comparison
+- `get_federal_upper_limits`: FUL pricing lookup by ingredient
+- `get_drug_rebate_info`: Rebate program data (NDC, manufacturer, FDA approval)
+- `get_state_drug_utilization`: Utilization by state, drug, quarter
+- `list_available_datasets`: Show available datasets
+- `search_datasets`: Generic dataset search
+
+### Architecture
+- **Small datasets (<50 MB)**: CSV download + in-memory cache
+  - NADAC: 123 MB → cached in memory
+  - Enrollment: 3.6 MB → cached in memory
+- **Large datasets (>100 MB)**: DKAN API queries
+  - Federal Upper Limits: 196 MB, 2.1M records
+  - Drug Rebate: 291 MB, ~3M records
+  - Drug Utilization: 192 MB, 5.3M records
 
 ---
 
