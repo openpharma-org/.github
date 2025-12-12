@@ -444,15 +444,21 @@ MCP server for accessing Medicare physician and provider data from CMS. Includes
 **Language**: Node.js
 
 ### Description
-MCP server for accessing Medicaid public data from data.medicaid.gov. Provides drug pricing (NADAC), state enrollment trends, federal upper limits, drug rebate program data, and state drug utilization statistics. Uses hybrid CSV + DKAN API architecture optimized for large datasets.
+MCP server for accessing Medicaid public data from data.medicaid.gov and state formularies. Provides drug pricing (NADAC), state enrollment trends, federal upper limits, drug rebate program data, state drug utilization statistics, and **state Medicaid formularies** with coverage and prior authorization requirements. Uses hybrid CSV + DKAN API architecture optimized for large datasets.
 
 ### Key Features
+- **State Medicaid Formularies** (5 states: CA, NY, OH, TX, IL covering 43% of US Medicaid)
+  - California: 40K drugs with NDC codes, PA requirements, pricing tiers
+  - New York: 37K drugs with MRA pricing (daily updates)
+  - Ohio: 76K drugs with comprehensive formulary data
+  - Texas: 4.7K drugs with multi-program pricing
+  - Illinois: 5.7K drugs with cross-state NDC enrichment (61.7% coverage)
 - NADAC drug pricing (1.5M records, weekly updates)
 - State-by-state Medicaid enrollment trends
 - Federal Upper Limits (FUL) pricing for generic drugs
 - Drug Rebate Program (MDRP) product information
 - State Drug Utilization Data (prescription volume by state)
-- Hybrid architecture: CSV for small datasets, DKAN API for large datasets
+- Hybrid architecture: CSV/Excel for small datasets, DKAN API for large datasets
 - Memory-optimized (~215 MB total vs ~4+ GB for all CSV)
 
 ### Data Source
@@ -463,6 +469,7 @@ MCP server for accessing Medicaid public data from data.medicaid.gov. Provides d
 - **API Key**: Not required
 
 ### Methods
+- `search_state_formulary`: **Unified state formulary search** (CA, NY, OH, TX, IL) with automatic pricing integration
 - `get_nadac_pricing`: Drug pricing lookup by NDC or name
 - `compare_drug_pricing`: Multi-drug or temporal price comparison
 - `get_enrollment_trends`: State enrollment over time
@@ -474,6 +481,12 @@ MCP server for accessing Medicaid public data from data.medicaid.gov. Provides d
 - `search_datasets`: Generic dataset search
 
 ### Architecture
+- **State Formularies**: Excel/CSV/JSON/Text download + in-memory cache
+  - California: Excel (1.7 MB, 40K drugs)
+  - New York: CSV (4.97 MB, 37K drugs, daily updates)
+  - Ohio: JSON (34 MB, 76K drugs)
+  - Texas: Text (1.63 MB, 4.7K drugs)
+  - Illinois: Excel with cross-state enrichment (222 KB, 5.7K drugs, 61.7% NDC coverage)
 - **Small datasets (<50 MB)**: CSV download + in-memory cache
   - NADAC: 123 MB → cached in memory
   - Enrollment: 3.6 MB → cached in memory
