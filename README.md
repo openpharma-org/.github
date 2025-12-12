@@ -22,6 +22,7 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 | **[pubchem-mcp](https://github.com/openpharma-org/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API |
 | **[sec-mcp](https://github.com/openpharma-org/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API |
 | **[medicare-mcp](https://github.com/openpharma-org/medicare-mcp)** | Medicare claims and provider data | CMS Medicare API |
+| **[medicaid-mcp-server](https://github.com/openpharma-org/medicaid-mcp-server)** | Medicaid drug pricing, enrollment, utilization | CMS DKAN (data.medicaid.gov) |
 | **[patents-mcp](https://github.com/openpharma-org/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents |
 | **[financials-mcp](https://github.com/openpharma-org/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API |
 
