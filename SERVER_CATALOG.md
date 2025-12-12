@@ -304,6 +304,85 @@ MCP server providing comprehensive access to European financial filings via ESEF
 
 ---
 
+## 7c. Asia Filings MCP Server
+
+**Repository**: `asia-filings-mcp-server`
+**Package Name**: `@openpharma/asia-filings-mcp` (npm)
+**Current Location**: https://github.com/openpharma-org/asia-filings-mcp-server
+**Language**: Node.js
+
+### Description
+MCP server providing comprehensive access to Asian financial filings via Japan's EDINET and South Korea's DART systems. Enables access to company filings, financial statements, and XBRL data from 7,700+ Asian companies using free public APIs.
+
+### Key Features
+- Japan (EDINET): 5,000+ companies + 3,000 investment funds via Financial Services Agency
+- Korea (DART): 2,700+ companies (KOSPI, KOSDAQ, KONEX) via Financial Supervisory Service
+- Company search by name (Japanese, Korean, English)
+- Complete filing access with multiple document formats
+- XBRL data extraction with J-GAAP and K-GAAP taxonomy support
+- Financial statements (balance sheets, income statements, cash flow)
+- Major shareholder tracking and ownership analysis
+- Executive and officer information
+- Dividend allocation data
+- Multi-market coverage across East Asia
+
+### Data Source
+- **APIs**:
+  - EDINET API v2 (Japan FSA)
+  - Open DART API (Korea FSS)
+- **Authority**: Japan Financial Services Agency (FSA), Korea Financial Supervisory Service (FSS)
+- **Update Frequency**: Real-time as filings are published
+- **Rate Limits**:
+  - EDINET: Not officially specified (conservative pacing)
+  - DART: 1,000 requests/minute
+- **API Key**: Required for both (free registration)
+
+### Methods
+**Japan (EDINET):**
+- `search_japan_companies`: Search companies by name (Japanese/English)
+- `get_japan_company_by_code`: Get company by EDINET code
+- `get_japan_company_filings`: Retrieve filing history
+- `get_japan_filing_document`: Download specific document (submission, PDF, XBRL)
+- `get_japan_documents_by_date`: Get all filings for specific date
+
+**Korea (DART):**
+- `search_korea_companies`: Search companies by name
+- `get_korea_company_by_code`: Get company by corporate code
+- `get_korea_company_filings`: Retrieve filing history
+- `get_korea_financial_statements`: Get XBRL financial data
+- `get_korea_major_shareholders`: Get shareholder information
+- `get_korea_executive_info`: Get executive/officer information
+- `get_korea_dividend_info`: Get dividend allocation data
+
+**Utilities:**
+- `filter_filings`: Filter filing arrays by criteria
+
+### Coverage
+- **Japan**:
+  - ~5,000 listed companies (Tokyo Stock Exchange - Prime, Standard, Growth)
+  - ~3,000 investment funds
+  - 65 document types
+  - Historical data from 2008+ (XBRL mandate)
+- **Korea**:
+  - KOSPI: ~880 companies
+  - KOSDAQ: ~1,700 companies
+  - KONEX: ~129 companies
+  - Multiple disclosure types (annual, quarterly, equity, issuance)
+
+### Technical Features
+- J-GAAP taxonomy support (Japan)
+- K-GAAP/IFRS taxonomy support (Korea)
+- EDINET code and corporate code identification systems
+- Multi-language support (Japanese, Korean, English)
+- UTF-8 encoding for Asian characters
+- Free API access with key registration
+
+### API Keys Required
+- **EDINET**: Free registration at disclosure.edinet-fsa.go.jp
+- **DART**: Free registration at opendart.fss.or.kr
+
+---
+
 ## 8. Healthcare (CMS Medicare) MCP Server
 
 **Repository**: `healthcare-mcp`
