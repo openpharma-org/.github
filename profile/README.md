@@ -4,7 +4,7 @@
 
 ## Overview
 
-OpenPharma is a collection of specialized MCP servers that provide AI agents with seamless access to authoritative pharmaceutical and biomedical data sources. Built on Anthropic's Model Context Protocol, these servers enable agentic workflows for drug discovery, clinical research, regulatory intelligence, and competitive analysis.
+OpenPharma is a collection of specialized MCP servers that provide AI agents with seamless access to authoritative pharmaceutical and biomedical data sources. Built on Anthropic's Model Context Protocol, these servers enable agentic workflows across drug discovery, medical devices, health economics, policy research, and life sciences innovation.
 
 ## Available MCP Servers
 
@@ -28,37 +28,13 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 | **[patents-mcp](https://github.com/openpharma-org/patents-mcp)** | Patent search and IP intelligence | USPTO, Google Patents |
 | **[financials-mcp](https://github.com/openpharma-org/financials-mcp)** | Stock data, economic indicators, FRED | Yahoo Finance, FRED API |
 
-## Use Cases
+## Why It Matters
 
-### Drug Discovery Research
-- Identify therapeutic targets with genetic evidence
-- Search chemical libraries and compounds
-- Analyze clinical trial landscapes
-- Track competitive intelligence
-
-### Clinical Development
-- Design trial protocols based on precedent
-- Monitor recruiting trials in therapeutic area
-- Track adverse events and safety signals
-- Analyze trial success rates by indication
-
-### Regulatory Intelligence
-- Research FDA approval precedents
-- Track drug label changes
-- Monitor recalls and shortages
-- Analyze approval timelines
-
-### Competitive Analysis
-- Map company pipelines and R&D spend
-- Track patent landscapes
-- Analyze market positioning
-- Monitor partnership activity
-
-### Market Access Strategy
-- Analyze disease burden and epidemiology
-- Research payer coverage and reimbursement
-- Track prescriber patterns
-- Evaluate health economics data
+- **Unified data access**: Single protocol for authoritative pharmaceutical and biomedical data sources
+- **Beyond pharma**: While pharma-focused, servers support medical devices, health economics, policy research, financial analysis, and life sciences innovation
+- **Open collaboration**: MIT-licensed servers enable community contributions and customization
+- **AI-native workflows**: Built for agentic systems, not just humans—enables autonomous research and analysis
+- **Vendor-neutral**: No proprietary databases or subscriptions required, only public APIs
 
 ## Architecture
 
@@ -88,7 +64,7 @@ OpenPharma servers follow the Model Context Protocol specification:
 - **Type-safe**: Full TypeScript/Python type definitions
 - **Error handling**: Graceful degradation and clear error messages
 - **Rate limiting**: Built-in respect for API rate limits
-- **Caching**: Optional caching for expensive queries
+- **Caching**: Caching for expensive queries
 
 ---
 
