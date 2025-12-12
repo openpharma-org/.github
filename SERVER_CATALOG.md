@@ -240,6 +240,70 @@ MCP server for accessing SEC EDGAR filings, company financials, and XBRL data. P
 
 ---
 
+## 7b. EU Filings MCP Server
+
+**Repository**: `eu-filings-mcp-server`
+**Package Name**: `@openpharma/eu-filings-mcp` (npm)
+**Current Location**: https://github.com/openpharma-org/eu-filings-mcp-server
+**Language**: Node.js
+
+### Description
+MCP server providing comprehensive access to European financial filings via ESEF (European Single Electronic Format). Enables access to company filings, financial statements, and XBRL data from 27+ European countries using the filings.xbrl.org API.
+
+### Key Features
+- Pan-European coverage (France, Germany, Italy, Spain, Netherlands, UK, Denmark, Switzerland, and more)
+- Company search by name or LEI (Legal Entity Identifier)
+- Complete filing access with XHTML, JSON, and package formats
+- XBRL data extraction with IFRS taxonomy support
+- Advanced dimensional fact extraction (geography, segments, products)
+- Fact table builder with business intelligence summaries
+- Time-series financial analysis with growth rates
+- Swiss company integration via GLEIF and SIX Exchange
+- German company support via GLEIF (DAX 40 companies)
+- Filing validation and quality metrics
+
+### Data Source
+- **API**: filings.xbrl.org (ESEF Filings Database)
+- **Secondary APIs**: GLEIF (Global LEI Foundation) for German/Swiss companies
+- **Authority**: ESMA (European Securities and Markets Authority)
+- **Update Frequency**: Real-time as filings are published
+- **Rate Limits**: No official limits (conservative 200ms pacing implemented)
+- **API Key**: Not required
+
+### Methods
+- `search_companies`: Find companies by name with country filtering
+- `get_company_by_lei`: Look up company using Legal Entity Identifier
+- `get_company_filings`: Retrieve filing history for a company
+- `get_country_companies`: List all companies filing in specific country
+- `get_entity_details`: Get detailed entity information
+- `get_filing_facts`: Extract XBRL financial data from filing
+- `get_filing_validation`: Retrieve validation messages and quality metrics
+- `filter_filings`: Filter filing arrays by date, country, validation quality
+- `get_dax40_companies`: Get list of major German companies with LEIs
+- `search_swiss_companies`: Search Swiss companies via GLEIF
+- `get_swiss_company_info`: Get Swiss company details by LEI
+- `get_six_listed_companies`: Curated list of major SIX-listed companies
+- `get_dimensional_facts`: Extract XBRL facts with dimensional breakdowns
+- `build_fact_table`: Build comprehensive fact table with BI summaries
+- `search_facts_by_value`: Search for facts by value range
+- `time_series_analysis`: Multi-period growth and trend analysis
+
+### Coverage
+- **EU Countries**: 27+ member states with ESEF filings
+- **Total Filings**: 23,000+ accessible filings
+- **Major Markets**: France (1,001+ companies), UK (2,445+ companies), Denmark, Italy, Spain, Netherlands
+- **Germany**: DAX 40 companies via GLEIF (Bundesanzeiger manual links)
+- **Switzerland**: Top 10 SIX-listed companies with investor relations links
+
+### Technical Features
+- IFRS taxonomy support (vs US-GAAP)
+- LEI-based company identification (vs CIK)
+- Multi-jurisdiction support (EU + UK + Norway + Ukraine + Switzerland)
+- Geographic and segment dimensional reporting
+- 98% feature parity with SEC MCP server
+
+---
+
 ## 8. Healthcare (CMS Medicare) MCP Server
 
 **Repository**: `healthcare-mcp`
