@@ -643,6 +643,79 @@ MCP server for searching USPTO and Google Patents databases. Provides access to 
 
 ---
 
+## 12b. DrugBank MCP Server
+
+**Repository**: `drugbank-mcp-server`
+**Package Name**: `@openpharma/drugbank-mcp` (npm)
+**Current Location**: https://github.com/openpharma-org/drugbank-mcp-server
+**Language**: Node.js
+
+### Description
+MCP server providing comprehensive access to the DrugBank pharmaceutical database (17,430+ drugs). Features high-performance SQLite backend with <10ms queries, full-text search, and automated monthly database updates via GitHub Actions.
+
+### Key Features
+- 17,430 drug records (13,166 small molecules + 4,264 biotech drugs)
+- Single unified tool (`drugbank_info`) with 10 methods
+- High-performance SQLite backend: <10ms queries, ~50-100MB memory usage (vs 30-60s first load and 2-3GB for XML)
+- Full-text search (FTS5) for drug names, indications, descriptions
+- Comprehensive pharmaceutical data:
+  - Drug names, descriptions, classifications, groups (approved, investigational, etc.)
+  - Clinical indications and mechanisms of action
+  - Chemical structures (SMILES, InChI, chemical properties)
+  - Drug interactions (drug-drug, food interactions)
+  - Target proteins, enzymes, carriers, transporters
+  - Metabolic pathways (SMPDB integration)
+  - Market products and regulatory information (FDA, EMA, HC, etc.)
+  - Pharmacokinetics (absorption, metabolism, half-life, protein binding)
+  - Toxicity data and contraindications
+  - ATC codes and therapeutic categories
+- Automated database updates with version tracking
+- Pre-built SQLite databases in GitHub releases (31MB, 98% size reduction from 1.5GB XML)
+
+### Data Source
+- **Database**: DrugBank Full Database (requires DrugBank account for XML access)
+- **Current Version**: 5.1 (tracked in `data/VERSION`)
+- **Authority**: DrugBank (University of Alberta / OMx Personal Health Analytics)
+- **Update Frequency**: Automated monthly via GitHub Actions (1st of each month)
+- **Database Format**: SQLite (31.1MB) converted from DrugBank XML (1.5GB)
+- **Distribution**: Pre-built databases available in GitHub Releases
+- **API Key**: Not required for using pre-built database; DrugBank credentials required only for building from source XML
+
+### Methods
+1. `search_by_name`: Search drugs by name (partial matching)
+2. `get_drug_details`: Complete drug information by DrugBank ID
+3. `search_by_indication`: Find drugs by medical indication
+4. `search_by_target`: Find drugs by target protein/enzyme
+5. `get_drug_interactions`: Get all drug-drug interactions
+6. `search_by_atc_code`: Search by ATC classification code
+7. `get_pathways`: Get metabolic pathways for a drug
+8. `search_by_structure`: Search by chemical structure (SMILES/InChI)
+9. `get_products`: Get market products (brand names, manufacturers)
+10. `search_by_category`: Search drugs by therapeutic category
+
+### Architecture
+- **Pattern**: Single unified tool with method enum (following who-mcp-server, sec-mcp-server, cdc-mcp-server patterns)
+- **Database**: Auto-detects SQLite (fast) or falls back to XML parser (slow)
+- **Performance**:
+  - SQLite mode: <10ms queries, ~50-100MB memory, 31.1MB database (98% reduction)
+  - XML fallback: 30-60s first load, ~2-3GB memory
+- **Automation**: GitHub Actions workflow for monthly database builds
+- **Version Tracking**: `data/VERSION` file tracks DrugBank version, smart rebuild logic
+
+### Automated Updates
+The server includes a GitHub Actions workflow that:
+1. Runs monthly (1st of each month) or on manual trigger
+2. Downloads latest DrugBank XML (requires `DRUGBANK_USERNAME` and `DRUGBANK_PASSWORD` secrets)
+3. Extracts version from XML header
+4. Compares with tracked version in `data/VERSION`
+5. Only builds if version changed or release is missing
+6. Creates GitHub release with SQLite database (31MB)
+7. Updates `data/VERSION` and commits to repository
+
+Users download pre-built databases via `npm run download:db` from GitHub releases.
+
+---
+
 ## 13. Financials MCP Server
 
 **Repository**: `financials-mcp`
