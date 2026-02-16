@@ -21,6 +21,8 @@ OpenPharma is a collection of specialized MCP servers that provide AI agents wit
 | **[Open Targets](https://github.com/openpharma-org/opentargets-mcp)** | Target validation and genetic evidence | Open Targets Platform |
 | **[PubChem](https://github.com/openpharma-org/pubchem-mcp)** | Chemical structures and compound properties | PubChem REST API |
 | **[DrugBank](https://github.com/openpharma-org/drugbank-mcp-server)** | Drug information database (17,430+ drugs) with fast SQLite queries | DrugBank (SQLite) |
+| **[ChEMBL](https://github.com/openpharma-org/chembl-mcp)** | Bioactive compounds, targets, bioactivity, mechanisms of action | ChEMBL REST API (EMBL-EBI) |
+| **[bioRxiv](https://github.com/openpharma-org/biorxiv-mcp)** | Preprint search, publication tracking, funder search | bioRxiv/medRxiv API |
 | **[SEC](https://github.com/openpharma-org/sec-mcp)** | Company financials and SEC filings | SEC EDGAR API |
 | **[EU Filings](https://github.com/openpharma-org/eu-filings-mcp-server)** | European financial filings and XBRL data | ESEF/filings.xbrl.org |
 | **[Asia Filings](https://github.com/openpharma-org/asia-filings-mcp-server)** | Asian financial filings from Japan and Korea | EDINET/DART APIs |
