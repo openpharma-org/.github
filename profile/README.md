@@ -4,7 +4,7 @@
 
 ## Overview
 
-OpenPharma is a collection of 37+ specialized MCP servers that provide AI agents with seamless access to authoritative pharmaceutical and biomedical data sources. Built on Anthropic's Model Context Protocol, these servers enable agentic workflows across drug discovery, genomics, clinical research, health economics, and life sciences innovation.
+OpenPharma is a collection of 50+ specialized MCP servers that provide AI agents with seamless access to authoritative pharmaceutical and biomedical data sources. Built on Anthropic's Model Context Protocol, these servers enable agentic workflows across drug discovery, genomics, clinical research, health economics, and life sciences innovation.
 
 All servers are bundled into [BioClaw](https://github.com/uh-joan/bioclaw), a biomedical AI assistant that runs them in isolated containers.
 
@@ -26,6 +26,7 @@ All servers are bundled into [BioClaw](https://github.com/uh-joan/bioclaw), a bi
 
 | Server | Description | Data Source |
 |--------|-------------|-------------|
+| **[NCBI](https://github.com/openpharma-org/ncbi-mcp-server)** | Gene, Protein, Nucleotide, OMIM databases | NCBI E-utilities |
 | **[ClinVar](https://github.com/openpharma-org/clinvar-mcp-server)** | Variant interpretation via NCBI E-utilities | ClinVar / NCBI |
 | **[COSMIC](https://github.com/openpharma-org/cosmic-mcp-server)** | Somatic mutations in cancer | COSMIC |
 | **[GWAS Catalog](https://github.com/openpharma-org/gwas-mcp-server)** | GWAS associations and studies | NHGRI-EBI GWAS Catalog |
@@ -44,6 +45,8 @@ All servers are bundled into [BioClaw](https://github.com/uh-joan/bioclaw), a bi
 | **[PDB](https://github.com/openpharma-org/pdb-mcp-server)** | Experimental protein structures | RCSB PDB REST API |
 | **[STRING-db](https://github.com/openpharma-org/stringdb-mcp-server)** | Protein-protein interaction networks | STRING API |
 | **[BindingDB](https://github.com/openpharma-org/bindingdb-mcp-server)** | Binding affinity data | BindingDB |
+| **[EMBL-EBI](https://github.com/openpharma-org/embl-mcp-server)** | InterPro domains, Pfam families, protein features | EMBL-EBI APIs |
+| **[ChEBI](https://github.com/openpharma-org/chebi-mcp-server)** | Chemical entity classification and ontology | ChEBI / OLS4 API |
 
 ### Pathways & Ontology
 
@@ -76,6 +79,8 @@ All servers are bundled into [BioClaw](https://github.com/uh-joan/bioclaw), a bi
 | **[PubMed](https://github.com/openpharma-org/pubmed-mcp)** | Biomedical literature search | PubMed/NCBI E-utilities |
 | **[bioRxiv](https://github.com/openpharma-org/biorxiv-mcp)** | Preprint search and tracking | bioRxiv/medRxiv API |
 | **[OpenAlex](https://github.com/openpharma-org/openalex-mcp-server)** | Scholarly works and citations | OpenAlex API |
+| **[CrossRef](https://github.com/openpharma-org/crossref-mcp-server)** | DOI metadata, citations, 150M+ scholarly works | CrossRef REST API |
+| **[CORE](https://github.com/openpharma-org/core-mcp-server)** | 200M+ open access research papers | CORE API v3 |
 | **[NLM Codes](https://github.com/openpharma-org/nlm-codes-mcp)** | Medical coding (ICD-10/11, HCPCS, NPI) | NLM Clinical Tables API |
 
 ### Healthcare & Policy
@@ -89,11 +94,11 @@ All servers are bundled into [BioClaw](https://github.com/uh-joan/bioclaw), a bi
 
 ## BioClaw
 
-All OpenPharma MCP servers come pre-bundled in [BioClaw](https://github.com/uh-joan/bioclaw), a biomedical AI assistant built on [NanoClaw](https://github.com/qwibitai/nanoclaw). One Docker image, 37 MCP servers, 120+ specialized agent skills, zero configuration.
+All OpenPharma MCP servers come pre-bundled in [BioClaw](https://github.com/uh-joan/bioclaw), a biomedical AI assistant built on [NanoClaw](https://github.com/qwibitai/nanoclaw). One Docker image, 50 MCP servers, 120+ specialized agent skills, zero configuration.
 
 ## Why It Matters
 
-- **Unified data access**: Single protocol for 37 authoritative pharmaceutical and biomedical data sources
+- **Unified data access**: Single protocol for 50 authoritative pharmaceutical and biomedical data sources
 - **Beyond pharma**: Genomics, proteomics, pathways, cancer biology, metabolomics, and more
 - **Open collaboration**: MIT-licensed servers enable community contributions and customization
 - **AI-native workflows**: Built for agentic systems — enables autonomous research and analysis
@@ -108,7 +113,7 @@ All OpenPharma MCP servers come pre-bundled in [BioClaw](https://github.com/uh-j
        │ MCP Protocol (JSON-RPC)
        │
 ┌──────▼──────────────────────────┐
-│  OpenPharma MCP Servers (37)    │
+│  OpenPharma MCP Servers (50)    │
 │  ┌───────┐ ┌────────┐ ┌──────┐ │
 │  │  FDA  │ │ClinVar │ │PubMed│ │
 │  └───┬───┘ └────┬───┘ └──┬───┘ │
